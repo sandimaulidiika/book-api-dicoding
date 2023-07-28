@@ -1,6 +1,6 @@
-# Bookshelf-API-Dicoding
+# Noteshelf-API-Dicoding
 
-Submission Bookshelf API - Kelas Belajar Membuat Aplikasi Back-End untuk Pemula oleh Dicoding Indonesia
+Submission Noteshelf API - Kelas Belajar Membuat Aplikasi Back-End untuk Pemula oleh Dicoding Indonesia
 
 # Deskripsi Kelas
 
@@ -18,5 +18,5 @@ Materi yang dipelajari:
 - Mengonsumsi dan Menguji RESTful API menggunakan Postman : Memasang Postman. Mengonsumsi RESTful API untuk tujuan pengujian dan menuliskan skenario uji otomatis menggunakan Postman. (5 Jam)
 - Evaluasi pembelajaran:
 
-Submission: Proyek akhir berupa praktik siswa berbentuk Bookshelf API berupa membuat Back-End dari aplikasi catatan yang memiliki fungsi Create, Read, Update, dan Delete.
+Submission: Proyek akhir berupa praktik siswa berbentuk Noteshelf API berupa membuat Back-End dari aplikasi catatan yang memiliki fungsi Create, Read, Update, dan Delete.
 Total jam yang dibutuhkan untuk menyelesaikan kelas ini, mulai dari persiapan kelas sampai evaluasi belajar, adalah 45 jam.

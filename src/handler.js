@@ -1,7 +1,7 @@
 const { nanoid } = require('nanoid');
-const books = require('./books');
+const notes = require('./notes');
 
-const addBookHandler = (request, h) => {
+const addNoteHandler = (request, h) => {
   const {
     name,
     year,
@@ -24,7 +24,7 @@ const addBookHandler = (request, h) => {
     finished = false;
   }
 
-  const newBook = {
+  const newNote = {
     id,
     name,
     year,
@@ -55,14 +55,14 @@ const addBookHandler = (request, h) => {
     response.code(400);
     return response;
   }
-  books.push(newBook);
-  const isSuccess = books.filter((book) => book.id === id).length > 0;
+  notes.push(newNote);
+  const isSuccess = notes.filter((note) => note.id === id).length > 0;
   if (isSuccess) {
     const response = h.response({
       status: 'success',
       message: 'Buku berhasil ditambahkan',
       data: {
-        bookId: id,
+        noteId: id,
       },
     });
     response.code(201);
@@ -76,29 +76,29 @@ const addBookHandler = (request, h) => {
   return response;
 };
 
-const getAllBooksHandler = (request, h) => {
+const getAllNotesHandler = (request, h) => {
   const { name, reading, finished } = request.query;
 
-  let bookQuery = books;
+  let noteQuery = notes;
 
   if (name) {
     const nameQuery = name.toLowerCase();
-    bookQuery = books.filter((b) => b.name.toLowerCase().includes(nameQuery));
+    noteQuery = notes.filter((b) => b.name.toLowerCase().includes(nameQuery));
   }
   if (reading) {
-    bookQuery = books.filter((b) => Number(b.reading) === Number(reading));
+    noteQuery = notes.filter((b) => Number(b.reading) === Number(reading));
   }
   if (finished) {
-    bookQuery = books.filter((b) => Number(b.finished) === Number(finished));
+    noteQuery = notes.filter((b) => Number(b.finished) === Number(finished));
   }
 
   const response = h.response({
     status: 'success',
     data: {
-      books: bookQuery.map((book) => ({
-        id: book.id,
-        name: book.name,
-        publisher: book.publisher,
+      notes: noteQuery.map((note) => ({
+        id: note.id,
+        name: note.name,
+        publisher: note.publisher,
       })),
     },
   });
@@ -106,16 +106,16 @@ const getAllBooksHandler = (request, h) => {
   return response;
 };
 
-const getBookByIdHandler = (request, h) => {
+const getNoteByIdHandler = (request, h) => {
   const { id } = request.params;
 
-  const book = books.filter((b) => b.id === id)[0];
+  const note = notes.filter((b) => b.id === id)[0];
 
-  if (book !== undefined) {
+  if (note !== undefined) {
     const response = h.response({
       status: 'success',
       data: {
-        book,
+        note,
       },
     });
     response.code(200);
@@ -129,7 +129,7 @@ const getBookByIdHandler = (request, h) => {
   return response;
 };
 
-const editBookByIdHandler = (request, h) => {
+const editnoteByIdHandler = (request, h) => {
   const { id } = request.params;
 
   const {
@@ -145,7 +145,7 @@ const editBookByIdHandler = (request, h) => {
 
   const updatedAt = new Date().toISOString();
 
-  const index = books.findIndex((book) => book.id === id);
+  const index = notes.findIndex((note) => note.id === id);
 
   if (!name) {
     const response = h.response({
@@ -163,8 +163,8 @@ const editBookByIdHandler = (request, h) => {
     response.code(400);
     return response;
   } if (index !== -1) {
-    books[index] = {
-      ...books[index],
+    notes[index] = {
+      ...notes[index],
       id,
       name,
       year,
@@ -191,13 +191,13 @@ const editBookByIdHandler = (request, h) => {
   return response;
 };
 
-const deleteBookByIdHandler = (request, h) => {
+const deleteNoteByIdHandler = (request, h) => {
   const { id } = request.params;
 
-  const index = books.findIndex((book) => book.id === id);
+  const index = notes.findIndex((note) => note.id === id);
 
   if (index !== -1) {
-    books.splice(index, 1);
+    notes.splice(index, 1);
     const response = h.response({
       status: 'success',
       message: 'Buku berhasil dihapus',
@@ -215,9 +215,9 @@ const deleteBookByIdHandler = (request, h) => {
 };
 
 module.exports = {
-  addBookHandler,
-  getAllBooksHandler,
-  getBookByIdHandler,
-  editBookByIdHandler,
-  deleteBookByIdHandler,
+  addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
+  editNoteByIdHandler,
+  deleteNoteByIdHandler,
 };

@@ -1,5 +1,5 @@
 {
-  "name": "bookshelf-api-dicoding",
+  "name": "noteshelf-api-dicoding",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandimaulidiika/books-web-server-dicoding.git"
+    "url": "git+https://github.com/sandimaulidiika/notes-web-server-dicoding.git"
   },
   "bugs": {
-    "url": "https://github.com/sandimaulidiika/books-web-server-dicoding/issues"
+    "url": "https://github.com/sandimaulidiika/notes-web-server-dicoding/issues"
   },
-  "homepage": "https://github.com/sandimaulidiika/books-web-server-dicoding#readme",
+  "homepage": "https://github.com/sandimaulidiika/notes-web-server-dicoding#readme",
   "description": "",
   "devDependencies": {
     "eslint": "^8.33.0",
