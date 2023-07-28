@@ -8,16 +8,16 @@
     "lint": "eslint ./"
   },
   "keywords": [],
-  "author": "sandimaulidikaa",
+  "author": "sandimaulidiika",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandimaulidikaa/hapi-web-server-dicoding.git"
+    "url": "git+https://github.com/sandimaulidiika/books-web-server-dicoding.git"
   },
   "bugs": {
-    "url": "https://github.com/sandimaulidikaa/hapi-web-server-dicoding/issues"
+    "url": "https://github.com/sandimaulidiika/books-web-server-dicoding/issues"
   },
-  "homepage": "https://github.com/sandimaulidikaa/hapi-web-server-dicoding#readme",
+  "homepage": "https://github.com/sandimaulidiika/books-web-server-dicoding#readme",
   "description": "",
   "devDependencies": {
     "eslint": "^8.33.0",
