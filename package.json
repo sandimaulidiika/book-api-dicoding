@@ -3,21 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/server.js",
-    "start-dev": "nodemon .src/server.js",
+    "start": "node src/server.js",
+    "start-dev": "nodemon src/server.js",
     "lint": "eslint ./"
   },
   "keywords": [],
-  "author": "sandimaulidiika",
+  "author": "sandimaulidika",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandimaulidiika/notes-web-server-dicoding.git"
+    "url": "git+https://github.com/sandimaulidiika/book-api-dicoding.git"
   },
   "bugs": {
-    "url": "https://github.com/sandimaulidiika/notes-web-server-dicoding/issues"
+    "url": "https://github.com/sandimaulidiika/book-api-dicoding/issues"
   },
-  "homepage": "https://github.com/sandimaulidiika/notes-web-server-dicoding#readme",
+  "homepage": "https://github.com/sandimaulidiika/book-api-dicoding#readme",
   "description": "",
   "devDependencies": {
     "eslint": "^8.33.0",
